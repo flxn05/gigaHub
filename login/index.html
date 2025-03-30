@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+  <main>
+    <h1 id="h1"></h1>
+
+    <input type="text" placeholder="username">
+    <input type="text" placeholder="password">
+    <button id="signin" onclick="signin()">sign me in</button>
+  </main>
+  <nav id="nav"></nav>
+  <script>
+    document.querySelector("#signin").addEventListener("click", function () {
+    this.textContent = "..."; // Change text content to "..."
+    
+    setTimeout(() => {
+        document.querySelector("#nav").classList.add("transition"); // Add .transition after 100ms
+    }, 100);
+
+    setTimeout(() => {
+        window.location.href = "http://127.0.0.1:5500/giga/gigaHub/my/index.html"; // Redirect after 1 second
+    }, 800);
+});
+
+  </script>
+</body>
+</html>
